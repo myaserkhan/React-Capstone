@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import axios from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { BsHouseFill } from 'react-icons/bs';
 import './stylesheets/Details.scss';
 import pokeball from '../assets/pokeball.png';
+import Footer from './Footer';
 
 function Details() {
   const [img, setImg] = useState(pokeball);
@@ -101,16 +101,9 @@ function Details() {
           <button type="button">More Details...</button>
         </div>
       </div>
-      <footer>
-        Copyright ©️ 2022
-        <a href="https://github.com/myaserkhan">myaserkhan</a>
-      </footer>
+      <Footer />
     </section>
   );
 }
-
-// Details.propTypes = {
-//   id: PropTypes.number.isRequired,
-// };
 
 export default Details;
