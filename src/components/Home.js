@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
+import { fetchApi } from './redux/previewSlice';
 import Header from './Header';
 import Preview from './Preview';
-import { fetchApi } from './redux/previewSlice';
 import './stylesheets/Home.scss';
 
 function Home() {

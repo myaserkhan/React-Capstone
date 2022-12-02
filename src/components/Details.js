@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { IconContext } from 'react-icons';
 import { BsHouseFill } from 'react-icons/bs';
+import axios from 'axios';
+import { updateImg } from './redux/previewSlice';
 import './stylesheets/Details.scss';
-import pokeball from '../assets/pokeball.png';
 import Footer from './Footer';
 import MoreDetails from './MoreDetails';
-import { updateImg } from './redux/previewSlice';
+import pokeball from '../assets/pokeball.png';
 
 function Details() {
   const [img, setImg] = useState(pokeball);
@@ -42,7 +42,6 @@ function Details() {
       }));
       Object.values(response.data.types).map((el) => types.push(el.type.name));
       setType1(types[0]);
-
       Object.values(response.data.abilities).map((el) => abilities.push(el.ability.name));
       setAbility1(abilities[0]);
       setAbility2(abilities[1]);
@@ -65,7 +64,6 @@ function Details() {
           </IconContext.Provider>
         </NavLink>
         <img src={img} alt="" />
-
         <div className="photos">
           <img src={img1} alt="" aria-hidden="true" onClick={() => setImg(img1)} />
           <img src={img2} alt="" aria-hidden="true" onClick={() => setImg(img2)} />
@@ -91,7 +89,7 @@ function Details() {
             </span>
           </li>
           <li className="property">
-            Base XP:
+            Base Exp:
             <span className="info">{pokemon.base_experience}</span>
           </li>
           <li className="property">
@@ -106,7 +104,6 @@ function Details() {
         <div className="gifPhotos">
           <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
           {more ? (<MoreDetails />) : (<button type="button" onClick={() => setMore(true)}>More Details...</button>)}
-
         </div>
       </div>
       <Footer />

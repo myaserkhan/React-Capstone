@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import './stylesheets/Preview.scss';
-import axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import axios from 'axios';
+import './stylesheets/Preview.scss';
 import Capitalize from './utils/Capitalize';
 import pokeball from '../assets/pokeball.png';
 

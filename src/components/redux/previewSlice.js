@@ -1,4 +1,3 @@
-// /* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -6,7 +5,7 @@ import axios from 'axios';
 const initialState = [];
 
 // Base URL
-const url = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
+const url = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
 // Async Thunk
 export const fetchApi = createAsyncThunk('preview/fetchApi', async () => {
@@ -14,14 +13,7 @@ export const fetchApi = createAsyncThunk('preview/fetchApi', async () => {
   return response.data;
 });
 
-export const fetchData = createAsyncThunk(
-  'preview/fetchData',
-  async (input) => {
-    const response = await axios.get(input);
-    return response.data;
-  },
-);
-
+// Slice Reducer
 const previewSlice = createSlice({
   name: 'preview',
   initialState,
