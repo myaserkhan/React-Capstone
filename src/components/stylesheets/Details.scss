@@ -1,5 +1,10 @@
 @import '../../App.scss';
 
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
 .detailsContainer {
   display: flex;
   flex-direction: column;
@@ -70,6 +75,7 @@
   bottom: 0;
   background-color: $clr-black-two;
   width: 100%;
+  padding: 0 0 1rem 0;
 
   .statsContainer {
     display: flex;
@@ -91,12 +97,18 @@
   }
 
   .gifPhotos {
-    margin-right: 1rem;
+    margin-right: 4rem;
   }
 }
 
 footer {
+  text-align: center;
   color: $clr-white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $clr-black-two;
+  padding: 0 0 0.25rem 0;
 
   a {
     color: $clr-yellow-gold;

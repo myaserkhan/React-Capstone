@@ -12,11 +12,14 @@ function Details() {
   const [img1, setImg1] = useState(pokeball);
   const [img2, setImg2] = useState(pokeball);
   const [img3, setImg3] = useState(pokeball);
-  const [img4, setImg4] = useState(pokeball);
+  const [img4, setImg4] = useState();
   const [pokemon, setPokemon] = useState('');
   const params = useParams();
   const types = [];
   const [type1, setType1] = useState();
+  const abilities = [];
+  const [ability1, setAbility1] = useState();
+  const [ability2, setAbility2] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -32,12 +35,16 @@ function Details() {
 
       Object.values(response.data.types).map((el) => types.push(el.type.name));
       setType1(types[0]);
+
+      Object.values(response.data.abilities).map((el) => abilities.push(el.ability.name));
+      setAbility1(abilities[0]);
+      setAbility2(abilities[1]);
     }
     fetchData();
   }, []);
 
   return (
-    <>
+    <section className="details">
       <div className="detailsContainer">
         <NavLink to="/">
           <h1>
@@ -65,6 +72,18 @@ function Details() {
             <span className="info">{type1}</span>
           </li>
           <li className="property">
+            Ability 01:
+            <span className="info">
+              {ability1}
+            </span>
+          </li>
+          <li className="property">
+            Ability 02:
+            <span className="info">
+              {ability2 || null}
+            </span>
+          </li>
+          <li className="property">
             Base XP:
             <span className="info">{pokemon.base_experience}</span>
           </li>
@@ -80,12 +99,12 @@ function Details() {
         <div className="gifPhotos">
           <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
         </div>
-        <footer>
-          Copyright ©️ 2022
-          <a href="https://github.com/mavericks-db">mavericks-db</a>
-        </footer>
       </div>
-    </>
+      <footer>
+        Copyright ©️ 2022
+        <a href="https://github.com/myaserkhan">myaserkhan</a>
+      </footer>
+    </section>
   );
 }
 
