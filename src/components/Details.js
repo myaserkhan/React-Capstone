@@ -51,32 +51,31 @@ function Details() {
           <img src={img1} alt="" aria-hidden="true" onClick={() => setImg(img1)} />
           <img src={img2} alt="" aria-hidden="true" onClick={() => setImg(img2)} />
           <img src={img3} alt="" aria-hidden="true" onClick={() => setImg(img3)} />
-          <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
+          {/* <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} /> */}
         </div>
       </div>
-      <div className="statsContainer">
-        <table>
-          <thead>
-            <tr>
-              <td className="property" />
-              <td className="info" />
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="property">Base Experience:</td>
-              <td className="info">{pokemon.base_experience}</td>
-            </tr>
-            <tr>
-              <td className="property">Height:</td>
-              <td className="info">{pokemon.height}</td>
-            </tr>
-            <tr>
-              <td className="property">Weight:</td>
-              <td className="info">{pokemon.weight}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="bottom">
+        <ul className="statsContainer">
+          <li className="property">
+            Base XP:
+            <span className="info">{pokemon.base_experience}</span>
+          </li>
+          <li className="property">
+            Height:
+            <span className="info">{pokemon.height}</span>
+          </li>
+          <li className="property">
+            Weight:
+            <span className="info">{pokemon.weight}</span>
+          </li>
+        </ul>
+        <div className="gifPhotos">
+          <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
+        </div>
+        <footer>
+          Copyright ©️ 2022
+          <a href="https://github.com/myaserkhan">myaserkhan</a>
+        </footer>
       </div>
     </>
   );
