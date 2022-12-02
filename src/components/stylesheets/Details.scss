@@ -1,6 +1,45 @@
 @import '../../App.scss';
 
-.homeBtn {
-  color: $clr-white;
-  font-size: 2rem;
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $clr-blue;
+
+  .homeBtn {
+    color: $clr-white;
+    font-size: 2rem;
+  }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    img {
+      background-color: $clr-black-two;
+      border-radius: 1rem;
+      margin: 0 1px;
+      width: 80px;
+    }
+  }
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $clr-black-two;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .property {
+    margin: 0 0 0 1rem;
+    color: $clr-white;
+  }
+
+  .info {
+    color: $clr-yellow-gold;
+  }
 }
