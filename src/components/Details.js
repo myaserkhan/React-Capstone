@@ -12,6 +12,7 @@ function Details() {
   const [img1, setImg1] = useState(pokeball);
   const [img2, setImg2] = useState(pokeball);
   const [img3, setImg3] = useState(pokeball);
+  const [img4, setImg4] = useState(pokeball);
   const [pokemon, setPokemon] = useState('');
   const params = useParams();
 
@@ -22,8 +23,9 @@ function Details() {
       );
       setImg(response.data.sprites.other['official-artwork'].front_default);
       setImg1(response.data.sprites.other['official-artwork'].front_default);
-      setImg2(response.data.sprites.other.dream_world.front_default);
+      setImg2(response.data.sprites.other.dream_world.front_default || pokeball);
       setImg3(response.data.sprites.other.home.front_default);
+      setImg4(response.data.sprites.versions['generation-v']['black-white'].animated.front_default);
       setPokemon(response.data);
     }
     fetchData();
@@ -49,6 +51,7 @@ function Details() {
           <img src={img1} alt="" aria-hidden="true" onClick={() => setImg(img1)} />
           <img src={img2} alt="" aria-hidden="true" onClick={() => setImg(img2)} />
           <img src={img3} alt="" aria-hidden="true" onClick={() => setImg(img3)} />
+          <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
         </div>
       </div>
       <div className="statsContainer">

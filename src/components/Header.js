@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
 import './stylesheets/Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { BsSearch } from 'react-icons/bs';
-// import pokemonLogo from '../assets/pokemonLogo.png';
 
 function Header() {
   const [hidden, setHidden] = useState(false);
   const [input, setInput] = useState('');
+  const navigate = useNavigate();
 
   const inputHandler = (e) => {
     setInput(e.target.value);
   };
 
-  const enterHandler = (e) => {
-    if (e.key === 'Enter') {
-      // const input = document.querySelector('.searchBar').value;
-      console.log(input);
-    }
+  const searchHandler = () => {
+    if (!input) return;
+    navigate(`/pokemon/details/${input}`);
   };
-  document.addEventListener('keydown', enterHandler);
-  // useEffect(() => {
-  // }, []);
 
   return (
     <>
@@ -32,9 +27,8 @@ function Header() {
         <div className="search">
           {hidden ? (
             <>
-              <input className="searchBar" type="text" placeholder="Search" onChange={inputHandler} />
-              <button type="button" onClick={() => setHidden(false)}>
-
+              <input className="searchBar" type="text" placeholder="Search" onChange={inputHandler} value={input} required />
+              <button type="button" onClick={searchHandler}>
                 <IconContext.Provider value={{ className: 'ball' }}>
                   <BsSearch />
                 </IconContext.Provider>
