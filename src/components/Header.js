@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import './stylesheets/Header.scss';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { BsSearch } from 'react-icons/bs';
+import './stylesheets/Header.scss';
 import { useSelector } from 'react-redux';
+import pokeball from '../assets/pokeball.png';
 
 function Header() {
   const pokemonList = useSelector((state) => state.preview);
@@ -12,6 +14,16 @@ function Header() {
   const [input, setInput] = useState();
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
+  const [img, setImg] = useState(pokeball);
+
+  useEffect(() => {
+    async function fetchData() {
+      const random = Math.floor(Math.random() * 898) + 1;
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${random}`);
+      setImg(response.data.sprites.versions['generation-v']['black-white'].animated.front_default);
+    }
+    fetchData();
+  }, []);
 
   const filter = (value) => {
     const list = [...pokemonList];
@@ -43,6 +55,7 @@ function Header() {
           <Link to="/" style={{ textDecoration: 'none' }}>
             <h1 className="titleText">POKEMON</h1>
           </Link>
+          <img className="logo" src={img} alt="" />
         </div>
         <div className="search">
           {hidden ? (
@@ -51,7 +64,7 @@ function Header() {
                 <input
                   className="searchBar"
                   type="text"
-                  placeholder="Search Pokemon Name or ID"
+                  placeholder="Search Name or ID"
                   onChange={inputHandler}
                   onFocus={focusHandler}
                   value={input}
