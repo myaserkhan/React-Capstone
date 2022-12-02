@@ -11,8 +11,8 @@ function MainPreview() {
   const [check, setCheck] = useState(false);
   const [input, setInput] = useState();
   const [ID, setID] = useState();
-  const randomID = () => Math.floor(Math.random() * 897 + 1);
-  const id = (randomID() * 0) + 1;
+  const randomID = () => Math.floor(Math.random() * 150 + 1);
+  const id = randomID();
 
   useEffect(() => {
     async function fetchData() {
