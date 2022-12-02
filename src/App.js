@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
+import Details from './components/Details';
 import Home from './components/Home';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pokemon/details/:id" element={<Details />} />
       </Routes>
     </>
   );

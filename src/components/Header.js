@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './stylesheets/Header.scss';
-import { BiWorld } from 'react-icons/bi';
+import { TbPokeball } from 'react-icons/tb';
 import { IconContext } from 'react-icons';
 import { BsSearch } from 'react-icons/bs';
 
@@ -27,12 +27,12 @@ function Header() {
       <section className="header">
         <div className="title">
           <h1>
-            NationAList
+            Pokémon
           </h1>
           <IconContext.Provider
             value={{ className: 'riGlobe' }}
           >
-            <BiWorld />
+            <TbPokeball />
           </IconContext.Provider>
         </div>
         <div className="search">
