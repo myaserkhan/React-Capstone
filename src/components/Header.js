@@ -14,7 +14,7 @@ function Header() {
   };
 
   const searchHandler = () => {
-    if (!input) return;
+    if (input > 898) return;
     navigate(`/pokemon/details/${input}`);
   };
 
@@ -27,7 +27,7 @@ function Header() {
         <div className="search">
           {hidden ? (
             <>
-              <input className="searchBar" type="text" placeholder="Search" onChange={inputHandler} value={input} required />
+              <input className="searchBar" type="number" placeholder="Search Pokemon ID" onChange={inputHandler} value={input} required />
               <button type="button" onClick={searchHandler}>
                 <IconContext.Provider value={{ className: 'ball' }}>
                   <BsSearch />

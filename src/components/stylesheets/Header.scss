@@ -32,8 +32,9 @@
     .searchBar {
       height: 2rem;
       padding: 0.25rem;
-      width: 100%;
       z-index: 1;
+      width: 10rem;
+      color: $clr-yellow-gold;
     }
 
     button {
