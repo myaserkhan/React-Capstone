@@ -20,10 +20,11 @@ function Preview({ pokemon }) {
       <div>
         <h1>
           {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
-
-          {Capitalize(pokemon.name)}
         </h1>
         <img src={img} alt="" />
+        <h2>
+          {Capitalize(pokemon.name)}
+        </h2>
       </div>
 
     </NavLink>
