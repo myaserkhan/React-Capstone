@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './stylesheets/Header.scss';
 import { NavLink } from 'react-router-dom';
-import pokeball from '../assets/pokeball.png';
+import { IconContext } from 'react-icons';
+import { BsSearch } from 'react-icons/bs';
 import pokemonLogo from '../assets/pokemonLogo.png';
 
 function Header() {
@@ -33,14 +34,18 @@ function Header() {
             <>
               <input className="searchBar" type="text" placeholder="Search" onChange={inputHandler} />
               <button type="button" onClick={() => setHidden(false)}>
-                <img className="ball" src={pokeball} alt="" />
 
+                <IconContext.Provider value={{ className: 'ball' }}>
+                  <BsSearch />
+                </IconContext.Provider>
               </button>
             </>
           )
             : (
               <button type="button" onClick={() => setHidden(true)}>
-                <img className="ball" src={pokeball} alt="" />
+                <IconContext.Provider value={{ className: 'ball' }}>
+                  <BsSearch />
+                </IconContext.Provider>
               </button>
             )}
         </div>
