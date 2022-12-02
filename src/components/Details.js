@@ -10,6 +10,10 @@ import pokeball from '../assets/pokeball.png';
 
 function Details() {
   const [img, setImg] = useState(pokeball);
+  const [img1, setImg1] = useState(pokeball);
+  const [img2, setImg2] = useState(pokeball);
+  const [img3, setImg3] = useState(pokeball);
+  const [img4, setImg4] = useState(pokeball);
   const [pokemon, setPokemon] = useState('');
   const params = useParams();
   console.log(pokemon);
@@ -18,6 +22,10 @@ function Details() {
     async function fetchData() {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${params.id}`);
       setImg(response.data.sprites.other['official-artwork'].front_default);
+      setImg1(response.data.sprites.front_default);
+      setImg2(response.data.sprites.back_default);
+      setImg3(response.data.sprites.front_shiny);
+      setImg4(response.data.sprites.back_shiny);
       setPokemon(response.data);
     }
     fetchData();
@@ -32,17 +40,15 @@ function Details() {
           </IconContext.Provider>
         </NavLink>
         <img src={img} alt="" />
-        <h2>
-          {pokemon.name}
-        </h2>
 
-        {/* <div className="photos"> */}
-        {/* {!pokemon */}
-        {/* ? (<img src={pokemon.sprites.front_default} alt="" />) : (<img src={img} alt="" />)} */}
-        {/* <img src={pokemon.sprites.back_default} alt="" />
-          <img src={pokemon.sprites.front_shiny} alt="" />
-          <img src={pokemon.sprites.back_shiny} alt="" /> */}
-        {/* </div> */}
+        <div className="photos">
+          {/* {!pokemon.length
+            ? (<img src={pokemon.sprites.front_default} alt="" />) : (<img src={img} alt="" />)} */}
+          <img src={img1} alt="" />
+          <img src={img2} alt="" />
+          <img src={img3} alt="" />
+          <img src={img4} alt="" />
+        </div>
       </div>
       <div className="statsContainer">
         <table>
@@ -86,7 +92,6 @@ function Details() {
               {pokemon.weight}
             </td>
           </tr>
-
         </table>
       </div>
     </>
