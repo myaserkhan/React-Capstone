@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../stylesheets/Header.scss';
+import './stylesheets/Header.scss';
 import { BiWorld } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
 import { BsSearch } from 'react-icons/bs';

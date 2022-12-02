@@ -4,6 +4,7 @@ import { nanoid } from 'nanoid';
 import Header from './Header';
 import Preview from './Preview';
 import { fetchApi } from './redux/previewSlice';
+import './stylesheets/Home.scss';
 
 function Home() {
   const pokemons = useSelector((state) => state.preview);
@@ -15,7 +16,9 @@ function Home() {
   return (
     <>
       <Header />
-      {pokemons.map((pokemon) => (<Preview key={nanoid()} pokemon={pokemon} />))}
+      <section className="list">
+        {pokemons.map((pokemon) => (<Preview key={nanoid()} pokemon={pokemon} />))}
+      </section>
     </>
   );
 }
