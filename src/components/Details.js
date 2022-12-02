@@ -1,8 +1,10 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 
 function Details() {
   return (
-    <div>Details</div>
+    <NavLink to="/"><BsFillArrowLeftCircleFill /></NavLink>
   );
 }
 

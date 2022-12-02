@@ -6,12 +6,12 @@ import { NavLink } from 'react-router-dom';
 import Capitalize from './utils/Capitalize';
 
 function Preview({ pokemon }) {
-  const [img, setImg] = useState('');
+  const [img, setImg] = useState('https://pokeapi.co/media/sprites/items/master-ball.png');
 
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}`);
-      setImg(response.data.sprites.front_default);
+      setImg(response.data.sprites.other['official-artwork'].front_default);
     }
     fetchData();
   });
