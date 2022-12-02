@@ -9,6 +9,7 @@
 .detailsContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: $clr-blue;
 
   h1 {
@@ -105,5 +106,41 @@
     img {
       margin: 0 0 1rem 0;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .detailsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+
+    .photos {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        margin: 0.5rem;
+      }
+    }
+  }
+
+  .bottom {
+    margin: 0 auto;
+    justify-content: center;
+
+    .statsContainer {
+      width: 20%;
+      margin: 0 2rem;
+
+      .property {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .gifPhotos {
+    margin: 0;
   }
 }
