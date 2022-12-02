@@ -97,7 +97,13 @@
   }
 
   .gifPhotos {
-    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4rem 0 0;
+
+    img {
+      margin: 0 0 1rem 0;
+    }
   }
 }
 

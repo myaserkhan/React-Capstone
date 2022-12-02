@@ -98,6 +98,7 @@ function Details() {
         </ul>
         <div className="gifPhotos">
           <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
+          <button type="button">More Details...</button>
         </div>
       </div>
       <footer>
