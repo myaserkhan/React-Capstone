@@ -16,7 +16,6 @@ function Details() {
   const [img4, setImg4] = useState(pokeball);
   const [pokemon, setPokemon] = useState('');
   const params = useParams();
-  console.log(pokemon);
 
   useEffect(() => {
     async function fetchData() {
@@ -52,46 +51,58 @@ function Details() {
       </div>
       <div className="statsContainer">
         <table>
-          <tr>
-            <td className="property">
-              ID:
-            </td>
-            <td className="info">
-              {pokemon.id}
-            </td>
-          </tr>
-          <tr>
-            <td className="property">
-              Name:
-            </td>
-            <td className="info">
-              {pokemon.name}
-            </td>
-          </tr>
-          <tr>
-            <td className="property">
-              Base Experience:
-            </td>
-            <td className="info">
-              {pokemon.base_experience}
-            </td>
-          </tr>
-          <tr>
-            <td className="property">
-              Height:
-            </td>
-            <td className="info">
-              {pokemon.height}
-            </td>
-          </tr>
-          <tr>
-            <td className="property">
-              Weight:
-            </td>
-            <td className="info">
-              {pokemon.weight}
-            </td>
-          </tr>
+          <thead>
+            <tr>
+              <td className="property">
+                Property
+              </td>
+              <td className="info">
+                Data
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="property">
+                ID:
+              </td>
+              <td className="info">
+                {pokemon.id}
+              </td>
+            </tr>
+            <tr>
+              <td className="property">
+                Name:
+              </td>
+              <td className="info">
+                {pokemon.name}
+              </td>
+            </tr>
+            <tr>
+              <td className="property">
+                Base Experience:
+              </td>
+              <td className="info">
+                {pokemon.base_experience}
+              </td>
+            </tr>
+            <tr>
+              <td className="property">
+                Height:
+              </td>
+              <td className="info">
+                {pokemon.height}
+              </td>
+            </tr>
+            <tr>
+              <td className="property">
+                Weight:
+              </td>
+              <td className="info">
+                {pokemon.weight}
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </>
