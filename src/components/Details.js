@@ -103,7 +103,7 @@ function Details() {
         </ul>
         <div className="gifPhotos">
           <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
-          {more ? (<MoreDetails />) : (<button type="button" onClick={() => setMore(true)}>More Details...</button>)}
+          {more ? (<MoreDetails id={pokemon.id} />) : (<button type="button" onClick={() => setMore(true)}>More Details...</button>)}
         </div>
       </div>
       <Footer />
