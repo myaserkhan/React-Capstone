@@ -1,0 +1,43 @@
+@import '../../App.scss';
+
+.guessBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 215px;
+  border: 1px solid grey;
+  color: $clr-white;
+  position: relative;
+  cursor: pointer;
+
+  .guessOval {
+    background-color: $clr-white;
+    border-radius: 50%;
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $clr-white;
+      border: 1px solid $clr-white;
+      border-radius: 50%;
+      padding: 0.25rem;
+    }
+
+    img {
+      width: 100px;
+      filter: grayscale(10%);
+      filter: brightness(0%);
+    }
+  }
+
+  .subtitle {
+    color: $clr-yellow-gold;
+    font-size: 2.5rem;
+    text-decoration: none;
+    text-align: center;
+  }
+}
