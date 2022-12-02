@@ -1,4 +1,3 @@
-
 @import '../../App.scss';
 
 .box {
@@ -39,11 +38,17 @@
   }
 
   h2 {
-    color: $clr-white;
-    font-size: 1.5rem;
+    color: $clr-yellow-gold;
+    font-size: 1.25rem;
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
     bottom: 0;
+    left: 0;
     right: 0;
+    text-align: center;
+    font-family: 'Pokemon Solid', sans-serif;
+    -webkit-text-stroke: 0.5px $clr-black;
   }
 
   img {

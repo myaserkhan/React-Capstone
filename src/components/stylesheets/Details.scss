@@ -5,9 +5,31 @@
   flex-direction: column;
   background-color: $clr-blue;
 
-  .homeBtn {
+  h1 {
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
     color: $clr-white;
+    border: 1px solid $clr-white;
+    border-radius: 50%;
+    padding: 0.25rem;
+    margin: 1rem 0 0 1rem;
+  }
+
+  .homeBtn {
+    color: $clr-black-two;
     font-size: 2rem;
+    margin: 1rem 1rem 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  img {
+    margin: 1rem 0;
+    width: 375px;
+    height: 375px;
   }
 
   .photos {
@@ -21,6 +43,7 @@
       border-radius: 1rem;
       margin: 0 1px;
       width: 80px;
+      height: 80px;
     }
   }
 }
