@@ -4,6 +4,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { BsSearch } from 'react-icons/bs';
 import { MdKeyboardVoice } from 'react-icons/md';
+import { RiSettings2Fill } from 'react-icons/ri';
 import './stylesheets/Header.scss';
 import { useSelector } from 'react-redux';
 import pokeball from '../assets/pokeball.png';
@@ -63,11 +64,7 @@ function Header() {
           {shown && <p>{name}</p>}
         </div>
         <div className="search">
-          <button type="button" onClick={() => setHidden(true)}>
-            <IconContext.Provider value={{ className: 'ball' }}>
-              <MdKeyboardVoice />
-            </IconContext.Provider>
-          </button>
+
           {hidden ? (
             <>
               <div className="searchField">
@@ -95,6 +92,16 @@ function Header() {
             </>
           ) : (
             <button type="button" onClick={() => setHidden(true)}>
+              <button type="button">
+                <IconContext.Provider value={{ className: 'ball' }}>
+                  <RiSettings2Fill />
+                </IconContext.Provider>
+              </button>
+              <button type="button">
+                <IconContext.Provider value={{ className: 'ball' }}>
+                  <MdKeyboardVoice />
+                </IconContext.Provider>
+              </button>
               <IconContext.Provider value={{ className: 'ball' }}>
                 <BsSearch />
               </IconContext.Provider>
