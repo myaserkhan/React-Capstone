@@ -27,6 +27,7 @@
   .statsContainer {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 1rem;
     list-style-type: none;
     width: 55%;
