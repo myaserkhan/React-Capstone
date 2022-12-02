@@ -22,7 +22,7 @@ function Preview({ pokemon }) {
         <h1>
           {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
         </h1>
-        <img src={img} alt="" />
+        {pokemon.img ? (<img src={pokemon.img} alt="" />) : (<img src={img} alt="" />)}
         <h2>
           {Capitalize(pokemon.name)}
         </h2>
@@ -33,8 +33,9 @@ function Preview({ pokemon }) {
 
 Preview.propTypes = {
   pokemon: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     name: PropTypes.string,
+    img: PropTypes.string,
   }).isRequired,
 };
 

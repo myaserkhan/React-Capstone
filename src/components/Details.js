@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink, useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { IconContext } from 'react-icons';
 import { BsHouseFill } from 'react-icons/bs';
 import './stylesheets/Details.scss';
 import pokeball from '../assets/pokeball.png';
 import Footer from './Footer';
 import MoreDetails from './MoreDetails';
+import { updateImg } from './redux/previewSlice';
 
 function Details() {
   const [img, setImg] = useState(pokeball);
@@ -22,6 +24,7 @@ function Details() {
   const [ability1, setAbility1] = useState();
   const [ability2, setAbility2] = useState();
   const [more, setMore] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     async function fetchData() {
@@ -34,7 +37,9 @@ function Details() {
       setImg3(response.data.sprites.other.home.front_default);
       setImg4(response.data.sprites.versions['generation-v']['black-white'].animated.front_default);
       setPokemon(response.data);
-
+      dispatch(updateImg({
+        id: params.id, name: response.data.name, img: response.data.sprites.other['official-artwork'].front_default,
+      }));
       Object.values(response.data.types).map((el) => types.push(el.type.name));
       setType1(types[0]);
 

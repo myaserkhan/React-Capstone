@@ -1,3 +1,4 @@
+// /* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -5,7 +6,7 @@ import axios from 'axios';
 const initialState = [];
 
 // Base URL
-const url = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+const url = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
 
 // Async Thunk
 export const fetchApi = createAsyncThunk('preview/fetchApi', async () => {
@@ -24,12 +25,22 @@ export const fetchData = createAsyncThunk(
 const previewSlice = createSlice({
   name: 'preview',
   initialState,
+  reducers: {
+    updateImg: {
+      reducer: (state, action) => (state.map((el) => (el.id === action.payload.id ? (
+        {
+          id: action.payload.id,
+          name: action.payload.name,
+          img: action.payload.img,
+        }
+      ) : el))),
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchApi.fulfilled, (state, action) => {
       const pokemons = action.payload.results.map((el, index) => ({
-        id: index + 1,
+        id: `${index + 1}`,
         name: el.name,
-        url: el.url,
         img: '',
       }));
       return pokemons;
@@ -37,4 +48,5 @@ const previewSlice = createSlice({
   },
 });
 
+export const { updateImg } = previewSlice.actions;
 export default previewSlice.reducer;
