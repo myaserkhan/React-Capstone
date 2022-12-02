@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
+import pokeball from '../assets/pokeball.png';
 
 function Details() {
   return (
-    <NavLink to="/"><BsFillArrowLeftCircleFill /></NavLink>
+    <NavLink to="/">
+      <img src={pokeball} alt="" srcSet="" />
+    </NavLink>
   );
 }
 

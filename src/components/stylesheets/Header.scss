@@ -11,13 +11,9 @@
     align-items: center;
     color: $clr-white;
 
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    .riGlobe {
+    .logo {
       font-size: 2rem;
-      color: $clr-white;
+      width: 5rem;
     }
   }
 
@@ -36,11 +32,11 @@
     button {
       border: none;
       background-color: transparent;
-    }
 
-    .riSearch {
-      font-size: 2rem;
-      color: $clr-white;
+      .ball {
+        font-size: 2rem;
+        width: 2rem;
+      }
     }
   }
 }

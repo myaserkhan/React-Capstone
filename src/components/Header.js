@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './stylesheets/Header.scss';
-import { TbPokeball } from 'react-icons/tb';
-import { IconContext } from 'react-icons';
-import { BsSearch } from 'react-icons/bs';
+import { NavLink } from 'react-router-dom';
+import pokeball from '../assets/pokeball.png';
+import pokemonLogo from '../assets/pokemonLogo.png';
 
 function Header() {
   const [hidden, setHidden] = useState(false);
@@ -26,35 +26,21 @@ function Header() {
     <>
       <section className="header">
         <div className="title">
-          <h1>
-            Pokémon
-          </h1>
-          <IconContext.Provider
-            value={{ className: 'riGlobe' }}
-          >
-            <TbPokeball />
-          </IconContext.Provider>
+          <NavLink to="/"><img className="logo" src={pokemonLogo} alt="" /></NavLink>
         </div>
         <div className="search">
           {hidden ? (
             <>
               <input className="searchBar" type="text" placeholder="Search" onChange={inputHandler} />
               <button type="button" onClick={() => setHidden(false)}>
-                <IconContext.Provider
-                  value={{ className: 'riSearch' }}
-                >
-                  <BsSearch />
-                </IconContext.Provider>
+                <img className="ball" src={pokeball} alt="" />
+
               </button>
             </>
           )
             : (
               <button type="button" onClick={() => setHidden(true)}>
-                <IconContext.Provider
-                  value={{ className: 'riSearch' }}
-                >
-                  <BsSearch />
-                </IconContext.Provider>
+                <img className="ball" src={pokeball} alt="" />
               </button>
             )}
         </div>

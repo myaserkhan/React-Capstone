@@ -4,9 +4,10 @@ import './stylesheets/Preview.scss';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import Capitalize from './utils/Capitalize';
+import pokeball from '../assets/pokeball.png';
 
 function Preview({ pokemon }) {
-  const [img, setImg] = useState('https://pokeapi.co/media/sprites/items/master-ball.png');
+  const [img, setImg] = useState(pokeball);
 
   useEffect(() => {
     async function fetchData() {
@@ -17,10 +18,11 @@ function Preview({ pokemon }) {
   });
   return (
     <NavLink to="/pokemon/details/:id" className="box">
-      <div>
+      <div className="oval">
         <h1>
           {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
         </h1>
+        <img className="pokeball" src={pokeball} alt="" />
         <img src={img} alt="" />
         <h2>
           {Capitalize(pokemon.name)}
