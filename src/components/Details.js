@@ -6,6 +6,7 @@ import { BsHouseFill } from 'react-icons/bs';
 import './stylesheets/Details.scss';
 import pokeball from '../assets/pokeball.png';
 import Footer from './Footer';
+import MoreDetails from './MoreDetails';
 
 function Details() {
   const [img, setImg] = useState(pokeball);
@@ -20,6 +21,7 @@ function Details() {
   const abilities = [];
   const [ability1, setAbility1] = useState();
   const [ability2, setAbility2] = useState();
+  const [more, setMore] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -98,7 +100,8 @@ function Details() {
         </ul>
         <div className="gifPhotos">
           <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} />
-          <button type="button">More Details...</button>
+          {more ? (<MoreDetails />) : (<button type="button" onClick={() => setMore(true)}>More Details...</button>)}
+
         </div>
       </div>
       <Footer />
