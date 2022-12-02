@@ -36,6 +36,9 @@ function Details() {
           <h1>
             {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
           </h1>
+          <h2>
+            {pokemon.name}
+          </h2>
           <IconContext.Provider value={{ className: 'homeBtn' }}>
             <BsHouseFill />
           </IconContext.Provider>
@@ -57,10 +60,6 @@ function Details() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="property">Name:</td>
-              <td className="info">{pokemon.name}</td>
-            </tr>
             <tr>
               <td className="property">Base Experience:</td>
               <td className="info">{pokemon.base_experience}</td>
