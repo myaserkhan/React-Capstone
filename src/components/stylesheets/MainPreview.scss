@@ -41,3 +41,21 @@
     text-align: center;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .guessBox {
+    padding: 0 4rem;
+
+    .guessOval {
+      padding: 2rem;
+    }
+
+    .subtitle {
+      // width: 100px;
+      margin-left: 1rem;
+      font-size: 2.5rem;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
