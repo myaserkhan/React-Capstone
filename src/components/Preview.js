@@ -1,9 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Preview() {
+function Preview({ pokemon }) {
   return (
-    <div>Preview</div>
+    <div>
+      {pokemon.id}
+      {pokemon.name}
+    </div>
   );
 }
+
+Preview.propTypes = {
+  pokemon: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  }).isRequired,
+};
 
 export default Preview;
