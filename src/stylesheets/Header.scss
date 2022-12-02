@@ -1,0 +1,47 @@
+@import '../App.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: $border-check;
+
+  .title {
+    display: flex;
+    align-items: center;
+    color: $clr-white;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .riGlobe {
+      font-size: 2rem;
+      color: $clr-white;
+    }
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .searchBar {
+      height: 2rem;
+      padding: 0.25rem;
+      width: 100%;
+      z-index: 1;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+    }
+
+    .riSearch {
+      font-size: 2rem;
+      color: $clr-white;
+    }
+  }
+}

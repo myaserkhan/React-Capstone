@@ -1,0 +1,23 @@
+@import url('http://fonts.cdnfonts.com/css/gill-sans');
+@import url('http://fonts.cdnfonts.com/css/lato');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+$border-check: 1px solid #ec4c8a;
+
+$clr-blue: #4369b2;
+$clr-white: #fff;
+$clr-black: #111;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $clr-blue;
+}
