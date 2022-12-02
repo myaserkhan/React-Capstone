@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { IconContext } from 'react-icons';
 import { RiCloseCircleFill } from 'react-icons/ri';
 import './stylesheets/MoreDetails.scss';
 
-function MoreDetails(props) {
+function MoreDetails() {
   const [shown, setShown] = useState(true);
-  // const [stat1, setStat1] = useState();
-  // const [pokemon, setPokemon] = useState();
-  // const stats = [];
-  const { id } = props;
-
+  // const [pokemon, setPokemon] = useState('');
+  const [stat1, setStat1] = useState();
+  const [statVal1, setStatVal1] = useState();
+  const stats = [];
+  const statsVal = [];
+  const params = useParams();
+  console.log(stats[0]);
   const clickHandler = () => {
     setShown(false);
   };
@@ -19,12 +21,14 @@ function MoreDetails(props) {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${id}`,
+        `https://pokeapi.co/api/v2/pokemon/${Number(params.id)}`,
       );
       // setPokemon(response.data);
-      console.log(response.data);
-      // Object.values(response.data.stats).map((el) => stats.push(el.stat.name));
-      // setStat1(stats[0]);
+      console.log(response.data.id);
+      Object.values(response.data.stats).map((el) => stats.push(el.stat.name));
+      Object.values(response.data.stats).map((el) => statsVal.push(el.base_stat));
+      setStat1(stats[0]);
+      setStatVal1(statsVal[0]);
     }
     fetchData();
   }, []);
@@ -40,8 +44,8 @@ function MoreDetails(props) {
           </button>
           <ul className="statsContainer">
             <li className="property">
-              Name:
-              {/* <span className="info">{pokemon.name}</span> */}
+              {`${stat1}:`}
+              <span className="info">{statVal1}</span>
             </li>
           </ul>
         </section>
@@ -53,9 +57,5 @@ function MoreDetails(props) {
     </>
   );
 }
-
-MoreDetails.propTypes = {
-  id: PropTypes.number.isRequired,
-};
 
 export default MoreDetails;
