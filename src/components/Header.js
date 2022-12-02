@@ -91,7 +91,7 @@ function Header() {
               </button>
             </>
           ) : (
-            <button type="button" onClick={() => setHidden(true)}>
+            <>
               <button type="button">
                 <IconContext.Provider value={{ className: 'ball' }}>
                   <RiSettings2Fill />
@@ -102,10 +102,12 @@ function Header() {
                   <MdKeyboardVoice />
                 </IconContext.Provider>
               </button>
-              <IconContext.Provider value={{ className: 'ball' }}>
-                <BsSearch />
-              </IconContext.Provider>
-            </button>
+              <button type="button" onClick={() => setHidden(true)}>
+                <IconContext.Provider value={{ className: 'ball' }}>
+                  <BsSearch />
+                </IconContext.Provider>
+              </button>
+            </>
           )}
         </div>
       </section>
