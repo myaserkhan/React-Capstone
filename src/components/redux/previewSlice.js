@@ -10,9 +10,17 @@ const url = 'https://pokeapi.co/api/v2/pokemon/?limit=100';
 // Async Thunk
 export const fetchApi = createAsyncThunk('preview/fetchApi', async () => {
   const response = await axios.get(url);
-  console.log(response.data);
   return response.data;
 });
+
+export const fetchData = createAsyncThunk(
+  'preview/fetchData',
+  async (input) => {
+    const response = await axios.get(input);
+    console.log(response.data);
+    return response.data;
+  },
+);
 
 const previewSlice = createSlice({
   name: 'preview',
@@ -24,6 +32,12 @@ const previewSlice = createSlice({
         name: el.name,
         url: el.url,
       }));
+      // pokemons.map((el) => fetchData(el.url));
+      // const pokemon = pokemons.map((el) => (
+      //   fetchData(el.url)
+      // ));
+      // fetchData(el.url);
+      // console.log(pokemons);
       return pokemons;
     },
   },

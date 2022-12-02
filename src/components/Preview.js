@@ -17,7 +17,7 @@ function Preview({ pokemon }) {
     fetchData();
   });
   return (
-    <NavLink to="/pokemon/details/:id" className="box">
+    <NavLink to={`/pokemon/details/${pokemon.id}`} className="box">
       <div className="oval">
         <h1>
           {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
