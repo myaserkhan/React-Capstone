@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import './stylesheets/MainPreview.scss';
 import pokeball from '../assets/pokeball.png';
 
 function MainPreview() {
+  const answer = useRef(null);
   const [img, setImg] = useState(pokeball);
+  const [name, setName] = useState();
+  const [check, setCheck] = useState(false);
+  const [input, setInput] = useState();
   const [ID, setID] = useState();
   const randomID = () => Math.floor(Math.random() * 897 + 1);
-  const id = randomID();
+  const id = (randomID() * 0) + 1;
 
   useEffect(() => {
     async function fetchData() {
@@ -16,6 +20,7 @@ function MainPreview() {
         `https://pokeapi.co/api/v2/pokemon/${id}`,
       );
       setID(response.data.id);
+      setName(response.data.name);
       setImg(response.data.sprites.other['official-artwork'].front_default);
     }
     fetchData();
@@ -26,14 +31,32 @@ function MainPreview() {
     return { backgroundColor: `hsl(219,45%,${random}%)`, textDecoration: 'none' };
   };
 
+  const changeHandler = (e) => {
+    const value = e.target.value.toLowerCase();
+    setInput(value);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (name === answer.current.value) return setCheck(true);
+    answer.current.value = '';
+    return null;
+  };
+
   return (
-    <NavLink to={`/pokemon/details/${ID}`} className="guessBox" style={random}>
-      <div className="guessOval">
-        <h1>{ID < 10 ? `0${ID}` : ID}</h1>
-        <img src={img} alt="" />
-      </div>
-      <h2 className="subtitle">Who&apos;s this POKEMON?</h2>
-    </NavLink>
+    <section className="container">
+      <NavLink to={`/pokemon/details/${ID}`} className="guessBox" style={random}>
+        <div className="guessOval">
+          <h1>{ID < 10 ? `0${ID}` : ID}</h1>
+          {check ? (<img className="reveal" src={img} alt="" />) : (<img className="hide" src={img} alt="" />)}
+        </div>
+        <h2 className="subtitle">Who&apos;s that POKEMON?</h2>
+      </NavLink>
+      <form onSubmit={submitHandler}>
+        <input type="text" ref={answer} placeholder="Type your Guess here" onChange={changeHandler} value={input} />
+        <button type="submit">Check Answer</button>
+      </form>
+    </section>
   );
 }
 

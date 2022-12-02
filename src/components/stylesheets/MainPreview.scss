@@ -1,5 +1,9 @@
 @import '../../App.scss';
 
+.container {
+  text-align: center;
+}
+
 .guessBox {
   display: flex;
   flex-direction: row;
@@ -27,10 +31,14 @@
       padding: 0.25rem;
     }
 
-    img {
+    .hide {
       width: 100px;
       filter: grayscale(10%);
       filter: brightness(0%);
+    }
+
+    .reveal {
+      width: 100px;
     }
   }
 
