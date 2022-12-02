@@ -33,8 +33,6 @@
     left: 0;
     right: 0;
     text-align: center;
-    // font-family: 'Pokemon Solid', sans-serif;
-    // -webkit-text-stroke: 0.5px $clr-black;
   }
 
   .homeBtn {
@@ -110,38 +108,54 @@
 }
 
 @media screen and (min-width: 768px) {
-  .detailsContainer {
+  .details {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
 
-    .photos {
+    .detailsContainer {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
 
-      img {
-        margin: 0.5rem;
+      h2 {
+        font-size: 2rem;
+        position: static;
+        margin: 1rem auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+
+      .photos {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          margin: 0.5rem;
+        }
       }
     }
-  }
 
-  .bottom {
-    margin: 0 auto;
-    justify-content: center;
-    padding: 0 0 2rem 0;
+    .bottom {
+      margin: 0 auto;
+      justify-content: center;
+      padding: 0 0 2rem 0;
 
-    .statsContainer {
-      width: 20%;
-      margin: 0 2rem;
+      .statsContainer {
+        width: 20%;
+        margin: 0 2rem;
 
-      .property {
-        justify-content: space-between;
+        .property {
+          justify-content: space-between;
+        }
       }
     }
-  }
 
-  .gifPhotos {
-    margin: 0;
+    .gifPhotos {
+      margin: 0;
+    }
   }
 }

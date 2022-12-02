@@ -52,13 +52,13 @@ function Details() {
   return (
     <section className="details">
       <div className="detailsContainer">
+        <h1>
+          {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
+        </h1>
+        <h2>
+          {pokemon.name}
+        </h2>
         <NavLink to="/">
-          <h1>
-            {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}
-          </h1>
-          <h2>
-            {pokemon.name}
-          </h2>
           <IconContext.Provider value={{ className: 'homeBtn' }}>
             <BsHouseFill />
           </IconContext.Provider>
