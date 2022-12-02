@@ -27,7 +27,6 @@ function Preview({ pokemon }) {
           {Capitalize(pokemon.name)}
         </h2>
       </div>
-
     </NavLink>
   );
 }

@@ -29,12 +29,22 @@
     flex-direction: row;
     align-items: center;
 
-    .searchBar {
-      height: 2rem;
-      padding: 0.25rem;
-      z-index: 1;
-      width: 10rem;
-      color: $clr-yellow-gold;
+    .searchField {
+      display: flex;
+      flex-direction: column;
+
+      .searchResults {
+        background-color: $clr-white;
+        color: $clr-grey;
+      }
+
+      .searchBar {
+        height: 2rem;
+        padding: 0.25rem;
+        z-index: 1;
+        width: 11rem;
+        color: $clr-yellow-gold;
+      }
     }
 
     button {

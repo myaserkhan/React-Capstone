@@ -15,6 +15,8 @@ function Details() {
   const [img4, setImg4] = useState(pokeball);
   const [pokemon, setPokemon] = useState('');
   const params = useParams();
+  const types = [];
+  const [type1, setType1] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -27,6 +29,9 @@ function Details() {
       setImg3(response.data.sprites.other.home.front_default);
       setImg4(response.data.sprites.versions['generation-v']['black-white'].animated.front_default);
       setPokemon(response.data);
+
+      Object.values(response.data.types).map((el) => types.push(el.type.name));
+      setType1(types[0]);
     }
     fetchData();
   }, []);
@@ -51,11 +56,14 @@ function Details() {
           <img src={img1} alt="" aria-hidden="true" onClick={() => setImg(img1)} />
           <img src={img2} alt="" aria-hidden="true" onClick={() => setImg(img2)} />
           <img src={img3} alt="" aria-hidden="true" onClick={() => setImg(img3)} />
-          {/* <img src={img4} alt="" aria-hidden="true" onClick={() => setImg(img4)} /> */}
         </div>
       </div>
       <div className="bottom">
         <ul className="statsContainer">
+          <li className="property">
+            Type:
+            <span className="info">{type1}</span>
+          </li>
           <li className="property">
             Base XP:
             <span className="info">{pokemon.base_experience}</span>
@@ -74,7 +82,7 @@ function Details() {
         </div>
         <footer>
           Copyright ©️ 2022
-          <a href="https://github.com/myaserkhan">myaserkhan</a>
+          <a href="https://github.com/mavericks-db">mavericks-db</a>
         </footer>
       </div>
     </>
