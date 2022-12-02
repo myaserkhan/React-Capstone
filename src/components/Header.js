@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './stylesheets/Header.scss';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import { BsSearch } from 'react-icons/bs';
-import pokemonLogo from '../assets/pokemonLogo.png';
+// import pokemonLogo from '../assets/pokemonLogo.png';
 
 function Header() {
   const [hidden, setHidden] = useState(false);
@@ -27,7 +27,7 @@ function Header() {
     <>
       <section className="header">
         <div className="title">
-          <NavLink to="/"><img className="logo" src={pokemonLogo} alt="" /></NavLink>
+          <Link to="/" style={{ textDecoration: 'none' }}><h1 className="titleText">POKEMON</h1></Link>
         </div>
         <div className="search">
           {hidden ? (
