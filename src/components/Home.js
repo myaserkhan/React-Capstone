@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { fetchApi } from './redux/previewSlice';
 import Header from './Header';
 import Preview from './Preview';
@@ -21,7 +20,7 @@ function Home() {
       <MainPreview />
       <h3>POKEMON BY ID</h3>
       <section className="list">
-        {pokemons.map((pokemon) => (<Preview key={nanoid()} pokemon={pokemon} />))}
+        {pokemons.map((pokemon) => (<Preview key={pokemon.id} pokemon={pokemon} />))}
       </section>
     </>
   );
