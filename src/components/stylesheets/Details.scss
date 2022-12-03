@@ -1,0 +1,161 @@
+@import '../../App.scss';
+
+.details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $clr-blue;
+
+  h1 {
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $clr-white;
+    border: 1px solid $clr-white;
+    border-radius: 50%;
+    padding: 0.25rem;
+    margin: 1rem 0 0 1rem;
+  }
+
+  h2 {
+    color: $clr-yellow-gold;
+    font-size: 1.25rem;
+    position: absolute;
+    margin: 1rem auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .homeBtn {
+    color: $clr-black-two;
+    font-size: 2rem;
+    margin: 1rem 1rem 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  img {
+    margin: 1rem 0;
+    width: 375px;
+    height: 375px;
+  }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    img {
+      background-color: $clr-black-two;
+      border-radius: 1rem;
+      margin: 0 1px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: $clr-black-two;
+  width: 100%;
+  padding: 0 0 1rem 0;
+
+  .statsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    list-style-type: none;
+    width: 55%;
+
+    .property {
+      margin: 0 0 0 1rem;
+      color: $clr-white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .info {
+      color: $clr-yellow-gold;
+    }
+  }
+
+  .gifPhotos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 4rem 0 0;
+
+    img {
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .detailsContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 2rem;
+        position: static;
+        margin: 1rem auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+
+      .photos {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          margin: 0.5rem;
+        }
+      }
+    }
+
+    .bottom {
+      margin: 0 auto;
+      justify-content: center;
+      padding: 0 0 2rem 0;
+
+      .statsContainer {
+        width: 20%;
+        margin: 0 2rem;
+
+        .property {
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .gifPhotos {
+      margin: 0;
+    }
+  }
+}

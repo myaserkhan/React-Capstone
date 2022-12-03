@@ -1,0 +1,13 @@
+@import '../../App.scss';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h3 {
+  color: $clr-yellow-gold;
+  font-size: 1rem;
+  padding: 0 1rem;
+  border: 1px solid grey;
+}
