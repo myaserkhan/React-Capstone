@@ -13,6 +13,10 @@
 - ReactJS
 - Redux
 
+## Live Demo 🔗
+
+Check the live demo [Netlify👈](https://teal-travesseiro-0a5b57.netlify.app/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
