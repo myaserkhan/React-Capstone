@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 }
 
+.list > :nth-child(even){
+  background:#0a55a5
+}
+
 h3 {
   color: $clr-yellow-gold;
   font-size: 1rem;
