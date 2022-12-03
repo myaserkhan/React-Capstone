@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the MainPreview component renders correctly 1`] = `
+<section
+  className="container"
+>
+  <a
+    className="guessBox"
+    href="/pokemon/details/undefined"
+    onClick={[Function]}
+    style={
+      Object {
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      className="guessOval"
+    >
+      <h1 />
+      <img
+        alt=""
+        className="hide"
+        src="pokeball.png"
+      />
+    </div>
+    <h2
+      className="subtitle"
+    >
+      Who's that POKEMON?
+    </h2>
+  </a>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Type your Guess here"
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Check Answer
+    </button>
+  </form>
+</section>
+`;

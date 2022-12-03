@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if Home Component renders correctly renders correctly 1`] = `
+Array [
+  <section
+    className="header"
+  >
+    <div
+      className="title"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "textDecoration": "none",
+          }
+        }
+      >
+        <h1
+          className="titleText"
+        >
+          POKEMON
+        </h1>
+      </a>
+      <img
+        alt=""
+        className="logo"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        src="pokeball.png"
+      />
+    </div>
+    <div
+      className="search"
+    >
+      <button
+        type="button"
+      >
+        <svg
+          className="ball"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M8.686 4l2.607-2.607a1 1 0 0 1 1.414 0L15.314 4H19a1 1 0 0 1 1 1v3.686l2.607 2.607a1 1 0 0 1 0 1.414L20 15.314V19a1 1 0 0 1-1 1h-3.686l-2.607 2.607a1 1 0 0 1-1.414 0L8.686 20H5a1 1 0 0 1-1-1v-3.686l-2.607-2.607a1 1 0 0 1 0-1.414L4 8.686V5a1 1 0 0 1 1-1h3.686zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        type="button"
+      >
+        <svg
+          className="ball"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"
+          />
+        </svg>
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <svg
+          className="ball"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+      </button>
+    </div>
+  </section>,
+  <section
+    className="container"
+  >
+    <a
+      className="guessBox"
+      href="/pokemon/details/undefined"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      <div
+        className="guessOval"
+      >
+        <h1 />
+        <img
+          alt=""
+          className="hide"
+          src="pokeball.png"
+        />
+      </div>
+      <h2
+        className="subtitle"
+      >
+        Who's that POKEMON?
+      </h2>
+    </a>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        onChange={[Function]}
+        placeholder="Type your Guess here"
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Check Answer
+      </button>
+    </form>
+  </section>,
+  <h3>
+    POKEMON BY ID
+  </h3>,
+  <section
+    className="list"
+  />,
+]
+`;

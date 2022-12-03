@@ -1,0 +1,62 @@
+@import '../../App.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .title {
+    display: flex;
+    align-items: center;
+    color: $clr-white;
+
+    .titleText {
+      color: $clr-yellow-gold;
+      font-size: 1.5rem;
+      // font-family: 'Pokemon Solid', sans-serif;
+      // -webkit-text-stroke: 0.5px $clr-black;
+    }
+
+    .logo {
+      font-size: 2rem;
+      width: 3rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .searchField {
+      display: flex;
+      flex-direction: column;
+
+      .searchResults {
+        background-color: $clr-white;
+        color: $clr-grey;
+      }
+
+      .searchBar {
+        height: 2rem;
+        padding: 0.25rem;
+        z-index: 1;
+        width: 8rem;
+        color: $clr-yellow-gold;
+      }
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+
+      .ball {
+        color: $clr-white;
+        font-size: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}

@@ -1,20 +1,21 @@
 import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import store from './components/redux/configureStore';
-import App from './App';
+import Home from '../Home';
+import store from '../redux/configureStore';
 
-const MockApp = () => (
+const MockHome = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <Home />
     </BrowserRouter>
   </Provider>
 );
 
-describe('Check if App Component renders correctly', () => {
+describe('Check if Home Component renders correctly', () => {
   test('renders heading', () => {
-    render(<MockApp />);
+    render(<MockHome />);
     const headingElement = screen.getByRole('heading', {
       name: /who's that pokemon\?/i,
     });
@@ -22,13 +23,13 @@ describe('Check if App Component renders correctly', () => {
   });
 
   test('renders textbox', () => {
-    render(<MockApp />);
+    render(<MockHome />);
     const textBoxElement = screen.getByRole('textbox');
     expect(textBoxElement).toBeInTheDocument();
   });
 
   test('renders button', () => {
-    render(<MockApp />);
+    render(<MockHome />);
     const buttonElement = screen.getByRole('button', {
       name: /check answer/i,
     });
@@ -36,10 +37,15 @@ describe('Check if App Component renders correctly', () => {
   });
 
   test('renders heading', () => {
-    render(<MockApp />);
+    render(<MockHome />);
     const headingElement = screen.getByRole('heading', {
       name: /pokemon by id/i,
     });
     expect(headingElement).toBeInTheDocument();
+  });
+
+  test('renders correctly', () => {
+    const tree = renderer.create(<MockHome />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

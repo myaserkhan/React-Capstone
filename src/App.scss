@@ -1,0 +1,29 @@
+@import url('http://fonts.cdnfonts.com/css/gill-sans');
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('http://fonts.cdnfonts.com/css/lato');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+$border-check: 1px solid #ec4c8a;
+
+$clr-blue: #4369b2;
+$clr-white: #fff;
+$clr-black: #111;
+$clr-light-blue: #708ec5;
+$clr-black-two: #1f2937;
+$clr-yellow-gold: #efb942;
+$clr-dark-blue: #2e4595;
+$clr-grey: #858585;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $clr-blue;
+}
