@@ -17,6 +17,10 @@
 
 Check the live demo [Netlify👈](https://teal-travesseiro-0a5b57.netlify.app/)
 
+## Project Documentation 📄
+
+Here is the presentation [video](https://www.loom.com/share/597d886f55ba44cdbef8e2fe48358ac6)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
