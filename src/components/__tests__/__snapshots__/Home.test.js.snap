@@ -125,7 +125,7 @@ Array [
       onClick={[Function]}
       style={
         Object {
-          "backgroundColor": "hsl(219,45%,47%)",
+          "backgroundColor": "hsl(219,45%,44%)",
           "textDecoration": "none",
         }
       }
