@@ -13,6 +13,14 @@
 - ReactJS
 - Redux
 
+## Live Demo 🔗
+
+Check the live demo [Netlify👈](https://teal-travesseiro-0a5b57.netlify.app/)
+
+## Project Documentation 📄
+
+Here is the presentation [video](https://www.loom.com/share/597d886f55ba44cdbef8e2fe48358ac6)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -44,9 +52,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Original design idea by [Nelson Sakwa in Behance](https://www.behance.net/sakwadesignstudio)
+
+Under the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## 📝 License
 
