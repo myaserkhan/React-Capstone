@@ -16,13 +16,9 @@ function Preview({ pokemon }) {
     }
     fetchData();
   });
-  const random = () => {
-    const random = Math.floor(Math.random() * (55 - 43) + 43);
-    return { backgroundColor: `hsl(219,45%,${random}%)` };
-  };
 
   return (
-    <NavLink to={`/pokemon/details/${pokemon.id}`} className="box" style={random}>
+    <NavLink to={`/pokemon/details/${pokemon.id}`} className="box">
       <div className="oval">
         <h1>
           {pokemon.id < 10 ? (`0${pokemon.id}`) : pokemon.id}

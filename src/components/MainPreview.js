@@ -26,11 +26,6 @@ function MainPreview() {
     fetchData();
   }, []);
 
-  const random = () => {
-    const random = Math.floor(Math.random() * (55 - 43) + 43);
-    return { backgroundColor: `hsl(219,45%,${random}%)`, textDecoration: 'none' };
-  };
-
   const changeHandler = (e) => {
     const value = e.target.value.toLowerCase();
     setInput(value);
@@ -45,7 +40,7 @@ function MainPreview() {
 
   return (
     <section className="container">
-      <NavLink to={`/pokemon/details/${ID}`} className="guessBox" style={random}>
+      <NavLink to={`/pokemon/details/${ID}`} className="guessBox" style={{ textDecoration: 'none' }}>
         <div className="guessOval">
           <h1>{ID < 10 ? `0${ID}` : ID}</h1>
           {check ? (<img className="reveal" src={img} alt="" />) : (<img className="hide" src={img} alt="" />)}

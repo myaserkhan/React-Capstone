@@ -10,7 +10,6 @@ exports[`Test the MainPreview component renders correctly 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "backgroundColor": "hsl(219,45%,54%)",
         "textDecoration": "none",
       }
     }
