@@ -1,0 +1,64 @@
+@import '../../App.scss';
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 150px;
+  height: 215px;
+  border: 1px solid grey;
+  color: $clr-white;
+  position: relative;
+  cursor: pointer;
+
+  .oval {
+    background-color: $clr-white;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $clr-white;
+    border: 1px solid $clr-white;
+    border-radius: 50%;
+    padding: 0.25rem;
+  }
+
+  .pokeball {
+    width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  h2 {
+    color: $clr-yellow-gold;
+    font-size: 1.25rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    // font-family: 'Pokemon Solid', sans-serif;
+    // -webkit-text-stroke: 0.5px $clr-black;
+  }
+
+  img {
+    width: 100px;
+    // filter: grayscale(10%);
+    // filter: brightness(0%);
+    // filter: contrast(0%);
+  }
+}
+
+.box:last-of-type {
+  width: 150px;
+}

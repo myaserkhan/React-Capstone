@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Details component renders correctly 1`] = `
+<section
+  className="details"
+>
+  <div
+    className="detailsContainer"
+  >
+    <h1 />
+    <h2 />
+    <a
+      aria-current="page"
+      className="active"
+      href="/"
+      onClick={[Function]}
+    >
+      <svg
+        className="homeBtn"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 16 16"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+          fillRule="evenodd"
+        />
+        <path
+          d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
+          fillRule="evenodd"
+        />
+      </svg>
+    </a>
+    <img
+      alt=""
+      src="pokeball.png"
+    />
+    <div
+      className="photos"
+    >
+      <img
+        alt=""
+        aria-hidden="true"
+        onClick={[Function]}
+        src="pokeball.png"
+      />
+      <img
+        alt=""
+        aria-hidden="true"
+        onClick={[Function]}
+        src="pokeball.png"
+      />
+      <img
+        alt=""
+        aria-hidden="true"
+        onClick={[Function]}
+        src="pokeball.png"
+      />
+    </div>
+  </div>
+  <div
+    className="bottom"
+  >
+    <ul
+      className="statsContainer"
+    >
+      <li
+        className="property"
+      >
+        Type:
+        <span
+          className="info"
+        />
+      </li>
+      <li
+        className="property"
+      >
+        Ability 01:
+        <span
+          className="info"
+        />
+      </li>
+      <li
+        className="property"
+      >
+        Ability 02:
+        <span
+          className="info"
+        />
+      </li>
+      <li
+        className="property"
+      >
+        Base Exp:
+        <span
+          className="info"
+        />
+      </li>
+      <li
+        className="property"
+      >
+        Height:
+        <span
+          className="info"
+        />
+      </li>
+      <li
+        className="property"
+      >
+        Weight:
+        <span
+          className="info"
+        />
+      </li>
+    </ul>
+    <div
+      className="gifPhotos"
+    >
+      <img
+        alt=""
+        aria-hidden="true"
+        onClick={[Function]}
+      />
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        More Details...
+      </button>
+    </div>
+  </div>
+  <footer>
+    Copyright ©️ 2022
+    <a
+      href="https://github.com/myaserkhan"
+    >
+      myaserkhan
+    </a>
+  </footer>
+</section>
+`;
